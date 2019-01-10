@@ -2,7 +2,9 @@ const path = require('path');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const ManifestPlugin = require('webpack-manifest-plugin');
 
-const packDirName = 'packs';
+const railsEnv = process.env.RAILS_ENV || 'development';
+
+const packDirName = `packs/${railsEnv}`;
 const packsDir = path.resolve(__dirname, `public/${packDirName}`);
 
 module.exports = {
