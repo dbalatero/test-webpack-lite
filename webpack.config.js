@@ -8,9 +8,11 @@ const packDirName = `packs/${railsEnv}`;
 const packsDir = path.resolve(__dirname, `public/${packDirName}`);
 
 module.exports = {
-  entry: "./src/index.js",
+  entry: {
+    "index": "./src/index.js",
+  },
   output: {
-    filename: "main.js",
+    filename: "[name].[contenthash].js",
     path: packsDir
   },
   plugins: [
