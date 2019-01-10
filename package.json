@@ -1,5 +1,7 @@
 {
   "name": "test-webpack-lite",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "webpack": "^4.28.4"
+  }
 }
